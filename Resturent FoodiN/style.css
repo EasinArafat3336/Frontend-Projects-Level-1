@@ -4,6 +4,15 @@
     box-sizing: border-box;
     
 }
+
+:root{
+    --color: rgb(232, 74, 34);
+    --bgcolor: #140e0b;
+    --fontdesing: "Dancing Script", cursive;
+}
+.body{
+    font-family: "Elms Sans", sans-serif;
+}
 .main{
     width: 100%;
 }
@@ -106,11 +115,6 @@
     transition: background-color 0.3s;
 }
 
-
-
-
-
-
 /*for Content==================*/
 .content{
     position: relative;
@@ -141,7 +145,7 @@
 .content .contentButton button{
     height: 50px;
     width: 150px;
-    background-color: rgb(232, 74, 34);
+    background-color: var(--color);
     border: none;
     color: white;
     font-size: 18px;
@@ -152,3 +156,114 @@
     transition: background-color 0.3s;
 }
 
+
+
+
+/*for Service Section=========================*/
+.service{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bgcolor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/*service Heading*/
+.service .headingSection{
+    text-align: center;
+}
+.service .headingSection p{
+    font-family: "Dancing Script", cursive;
+    font-size: 40px;
+    color: white;
+}
+.service .headingSection h5{
+    font-size: 60px;
+    color: #fff;
+}
+.service .headingSection h5 span{
+    color: var(--color);
+}
+
+/*service imoooge*/
+.service .delivery{
+    height: 30%;
+    width: 100%;
+    padding: 0 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+.service .delivery div{
+    height: 22vw;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    box-shadow: 0 5px 5px ;
+    border-radius: 5px;
+}
+.service .delivery div:hover{
+    transition: outline 0.3s;
+    outline: 1px solid #fff;
+}
+.service .delivery img{
+    height: 40%;
+    width: 40%;
+}
+.service .delivery div h6{
+    color: #fff;
+    font-size: 2vw;
+}
+.service .delivery div p{
+    color: #ffffffa1;
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+
+
+
+/*for section 3 aboutUs=============*/
+.aboutUs{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bgcolor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutUs .heading{
+   display: flex;
+
+    width: 80%;
+}
+.aboutUs .heading .firstHeading{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.aboutUs .heading .firstHeading p{
+    font-family: var(--fontdesing);
+    font-size: 50px;
+    color: #fff;
+}
+.aboutUs .heading .firstHeading h5{
+    font-size: 70px;
+    color: #fff;
+    text-transform: capitalize;
+}
+.aboutUs .heading .firstHeading h5 span{
+    color: var(--color);
+}
+
+.aboutUs .heading .paragraph{
+    display: flex;
+    align-items: center;
+}
