@@ -237,10 +237,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    padding-top: ;
 }
-.aboutUs .heading{
-   display: flex;
 
+/*heading*/
+.aboutUs .heading{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     width: 80%;
 }
 .aboutUs .heading .firstHeading{
@@ -262,8 +267,215 @@
 .aboutUs .heading .firstHeading h5 span{
     color: var(--color);
 }
-
 .aboutUs .heading .paragraph{
     display: flex;
+    justify-content: flex-end;
     align-items: center;
 }
+.aboutUs .heading .paragraph p{
+    width: 80%;
+    text-align: right;
+    color: #ffffffa1;
+    font-size: 20px;
+}
+
+/*photoCard*/
+.aboutUs .photoCard{
+    height: 40%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vw;
+}
+.aboutUs .photoCard >div{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid rgb(222, 142, 45);
+}
+.aboutUs .photoCard >div img{
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+}
+.aboutUs .photoCard >div >div{
+    height: 40%;
+    width: 100%;
+    background-color: #FAEDDC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+    gap: 1vh;
+}
+.aboutUs .photoCard >div >div p{
+    color: rgba(0, 0, 0, 0.649);
+    font-size: 22px;
+}
+.aboutUs .photoCard >div >div button{
+    height: 5vh;
+    width: 8vw;
+    border: none;
+    background-color: var(--color);
+    color: #fff;
+    font-size: 18px;
+}
+.aboutUs .photoCard >div >div button:hover{
+    background-color: transparent;
+    border: 2px solid var(--color);
+    color: black;
+    transition: background-color 0.5s;
+}
+
+
+
+
+
+/*For Banner====================================*/
+.banner{
+    height: 100vh;
+    width: 100%;
+    padding: 0 10vw;
+    background-color: #2C2420;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/*download app*/
+.banner .downloadApp{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-right: 3vw;
+    gap: 3vh;
+}
+.banner .downloadApp h6{
+    font-size: 50px;
+    color: var(--color);
+}
+.banner .downloadApp h3{
+    font-family: var(--fontdesing);
+    font-size: 80px;
+    text-transform: capitalize;
+    color: #fff;
+}
+.banner .downloadApp p{
+    font-size: 18px;
+    color: #ffffffa9;
+}
+.banner .downloadApp button{
+    height: 5vh;
+    width: 8vw;
+    text-transform: capitalize;
+    border: none;
+    background-color: var(--color);
+    font-size: 18px;
+    color: #fff;
+}
+.banner .downloadApp button:hover{
+    border: 2px solid var(--color);
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+/*banner*/
+.banner .forBanner{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.banner .forBanner img{
+    height: 80%;
+    width: 80%;
+}
+
+
+
+
+/*for footer =============================*/
+.footer{
+    height: 50vh;
+    width: 100%;
+    background-color: var(--bgcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .footerRapper{
+    height: 60%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.footer .footerRapper > div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1vw;
+}
+.footer .footerRapper > div h6{
+    font-size: 25px;
+    color: #fff;
+}
+.footer .footerRapper > div div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+.footer .footerRapper > div div a{
+    color: rgba(255, 255, 255, 0.719);
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.footer .footerRapper > div div a:hover{
+    color: var(--color);
+    transition: color 0.3s;
+}
+
+
+/*foodin*/
+.footer .footerRapper .foodin{
+    padding-right: 20px;
+}
+.footer .footerRapper .foodin .navLogo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.footer .footerRapper .foodin img{
+    height: 50px;
+    width: 50px;
+}
+.footer .footerRapper .foodin h6{
+    font-size: 25px;
+    color: #fff;
+}
+.footer .footerRapper .foodin p{
+    font-size: 15px;
+    color: #ffffffa8;
+    display: inline-block;
+    margin-left: 8px;
+}
+.footer .footerRapper .foodin .icon{
+    display: flex;
+    flex-direction: row;
+}
+.footer .footerRapper .foodin .icon .fa-brands{
+    font-size: 30px;
+    display: inline-block;
+    color: #fff;
+    
+}
+
