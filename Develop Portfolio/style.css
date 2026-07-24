@@ -1,0 +1,41 @@
+
+.menu{
+    flex-shrink: 0;
+}
+.icon{
+    display: flex;
+    gap: 20px;
+}
+.icon i{
+    font-size: 25px;
+
+}
+.menuIcon{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+
+}
+.menuIcon span{
+    
+    height: 4px;
+    width: 30px;
+    background-color: black;
+}
+@media (max-width: 1170px) {
+    .navbar{
+        gap: 7vw;
+    }
+}
+@media (max-width: 975px) {
+    .menu{
+        display: none;
+    }
+    .menuIcon{
+        display: flex;
+    }
+    .navbar{
+        gap: 0;
+        justify-content: space-between;
+    }
+}
