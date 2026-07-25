@@ -1,25 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
 
+
+/*for navigation bar*/
+.navbar{
+    height: 7vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 11vw;
+    gap: 11vw;
+    position: relative;
+}
+.logo{
+    font-size: 35px;
+    flex-shrink: 0
+}
+.logo span{
+    color: rgb(7, 108, 108);
+}
 .menu{
-    flex-shrink: 0;
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0
+}
+.menu div a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
 }
 .icon{
     display: flex;
-    gap: 20px;
+    height: 100%;
+    align-items: center;
+    gap: 10px;
 }
 .icon i{
-    font-size: 25px;
-
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
 }
 .menuIcon{
     display: none;
     flex-direction: column;
-    gap: 5px;
-
+    gap: 3px;
+    cursor: pointer;
 }
 .menuIcon span{
-    
-    height: 4px;
-    width: 30px;
+    display: inline-block;
+    height: 5px;
+    width: 25px;
     background-color: black;
 }
 @media (max-width: 1170px) {
@@ -28,6 +65,7 @@
     }
 }
 @media (max-width: 975px) {
+    
     .menu{
         display: none;
     }
@@ -37,5 +75,70 @@
     .navbar{
         gap: 0;
         justify-content: space-between;
+    }
+}
+
+/*for menu transition*/
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    padding-top: 10vh;
+    right: 0;
+    top: 7vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.274);
+    height: 93vh;
+    width: 100vw;
+}
+.controlSidebar{
+    transform: translateX(100%);
+}
+.sidebar div{
+    height: 7vh;
+    width: 100%;
+    background-color: ;
+    display: flex;
+    justify-content: center;
+    border-top:1px solid rgba(255, 255, 255, 0.484) ;
+    align-items: center;
+}
+.sidebar div a{
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+.sidebar .lastA{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.434);
+}
+.sidebarOpen{
+    animation: movein 0.8s ease forwards;
+}
+.sidebarClose{
+    animation: moveout 0.5s ease forwards;
+}
+@keyframes movein {
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+        border-top-left-radius: 25%;
+        border-bottom-left-radius: 50%;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes moveout {
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(100%);
+        opacity: 0;
     }
 }
