@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -21,20 +21,21 @@ body{
 }
 .logo{
     font-size: 35px;
-    flex-shrink: 0
+    flex-shrink: 0;
+    color: rgb(24, 33, 74);
 }
 .logo span{
     color: rgb(7, 108, 108);
 }
 .menu{
     display: flex;
-    gap: 10px;
-    flex-shrink: 0
+    gap: 25px;
+    flex-shrink: 0;
 }
 .menu div a{
     text-decoration: none;
-    color: black;
-    font-size: 20px;
+    color: white;
+    font-size: 18px;
 }
 .icon{
     display: flex;
@@ -46,6 +47,7 @@ body{
     display: inline-block;
     font-size: 30px;
     cursor: pointer;
+    color: yellow;
 }
 .menuIcon{
     display: none;
@@ -141,4 +143,48 @@ body{
         transform: translateX(100%);
         opacity: 0;
     }
+}
+
+
+
+
+
+/*for Hero Section*/
+.hero{
+    
+    height: 90vh;
+    width: 100vw;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+}
+.heroContent{
+    height: 100%;
+    width: 70vw;
+}
+.infoPhoto{
+    height: 80%;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.info{
+    width: 48%;
+    height: 90%;
+}
+.mainInfo{
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.688);
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+    padding: 25px;
+}
+.infoPhoto img{
+    height: 90%;
+    width: 48%;
+    object-fit: cover;
+    border-radius: 50%;
 }
