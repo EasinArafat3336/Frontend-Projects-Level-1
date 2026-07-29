@@ -1,23 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "JetBrains Mono";
 }
 body{
     overflow-x: hidden;
 }
-
-
+.main{
+    display: flex;
+    justify-content: center;
+}
+.mainContent{
+    height: 100%;
+    width: 1300px;
+    overflow: hidden;
+}
 /*for navigation bar*/
 .navbar{
     height: 7vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 11vw;
-    gap: 11vw;
+    gap: 7vw;
     position: relative;
+    background-color: rgb(178, 179, 179);
 }
 .logo{
     font-size: 35px;
@@ -35,7 +45,7 @@ body{
 .menu div a{
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 15px;
 }
 .icon{
     display: flex;
@@ -151,22 +161,15 @@ body{
 
 /*for Hero Section*/
 .hero{
-    
     height: 90vh;
-    width: 100vw;
+    width: 100%;
     background-color: beige;
-    display: flex;
-    justify-content: center;
     margin-top: 3vh;
-}
-.heroContent{
-    height: 100%;
-    width: 70vw;
 }
 .infoPhoto{
     height: 80%;
     width: 100%;
-    background-color: aqua;
+    background-color:;
     display: flex;
     justify-content: space-between;
     
@@ -181,6 +184,31 @@ body{
     backdrop-filter: blur(10px);
     border: 1px solid white;
     padding: 25px;
+}
+.mainInfo .topbutton{
+    height: 40px;
+    width: 37%;
+    background-color: rgb(24, 33, 74);
+    border-radius: 25px;
+    text-align: center;
+    padding-top: 10px;
+}
+.mainInfo .heading .firstHeading{
+    margin-top: 5vh;
+    font-size: 60px;
+}
+.mainInfo .heading .secondHeading{
+    color: rgb(255, 0, 162);
+    font-size: 60px;
+    margin-bottom: 2.5vh;
+}
+.mainInfo .bottomSpan{
+    display: inline-block;
+    height: 10px;
+    width: 5vw;
+    background: linear-gradient(to right, black, rgb(255, 0, 162));
+    margin-bottom: 2.5vh;
+    border-radius: 25px;
 }
 .infoPhoto img{
     height: 90%;
