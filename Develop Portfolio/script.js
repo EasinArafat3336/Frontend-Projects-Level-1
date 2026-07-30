@@ -14,3 +14,12 @@ menuIcon.addEventListener("click",()=>{
         sidebar.classList.add("sidebarOpen")
     }
 })
+
+
+/*for dark mode*/
+let html = document.querySelector("html");
+let darkMode = document.querySelector(".fa-lightbulb");
+
+darkMode.addEventListener("click",()=>{
+    html.classList.toggle("dark");
+})

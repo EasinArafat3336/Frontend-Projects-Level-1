@@ -1,5 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
+:root{
+    --mainbgColor:rgb(65, 65, 128); 
+    --logoBlue: rgb(40, 212, 255);
+    --logoGreen: rgb(3, 255, 205);
+    --color: #fff;
+    --buttonBg: rgba(36, 174, 229, 0.245);
+    --border: #ffffff8f;
+    --bgBlurColor: #ffffff23;
+    --sideBg: rgba(0, 0, 0, 0.274);
+    --sideBorder: rgba(255, 255, 255, 0.484);
+}
+.dark{
+    --mainbgColor: black; 
+    --logoBlue: rgb(255, 0, 170);
+    --logoGreen: #fff;
+    --color: #fff;
+    --buttonBg: rgba(255, 0, 234, 0.119);
+    --border: #ffffff8f;
+    --bgBlurColor: #ffffff23;
+    --sideBg: rgba(0, 0, 0, 0.274);
+    --sideBorder: rgba(255, 255, 255, 0.484);
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -12,30 +36,30 @@ body{
 .main{
     display: flex;
     justify-content: center;
+    background-color: var(--mainbgColor);
 }
 .mainContent{
     height: 100%;
     width: 1300px;
-    overflow: hidden;
+    position: relative;
 }
 /*for navigation bar*/
 .navbar{
     height: 7vh;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 7vw;
     position: relative;
-    background-color: rgb(178, 179, 179);
+    padding: 0 1vw;
 }
 .logo{
     font-size: 35px;
     flex-shrink: 0;
-    color: rgb(24, 33, 74);
+    color: var(--logoBlue);
 }
 .logo span{
-    color: rgb(7, 108, 108);
+    color: var(--logoGreen);
 }
 .menu{
     display: flex;
@@ -44,7 +68,7 @@ body{
 }
 .menu div a{
     text-decoration: none;
-    color: white;
+    color: var(--color);
     font-size: 15px;
 }
 .icon{
@@ -57,7 +81,7 @@ body{
     display: inline-block;
     font-size: 30px;
     cursor: pointer;
-    color: yellow;
+    color: var(--logoBlue);
 }
 .menuIcon{
     display: none;
@@ -69,26 +93,9 @@ body{
     display: inline-block;
     height: 5px;
     width: 25px;
-    background-color: black;
+    background-color: var(--logoGreen);
 }
-@media (max-width: 1170px) {
-    .navbar{
-        gap: 7vw;
-    }
-}
-@media (max-width: 975px) {
-    
-    .menu{
-        display: none;
-    }
-    .menuIcon{
-        display: flex;
-    }
-    .navbar{
-        gap: 0;
-        justify-content: space-between;
-    }
-}
+
 
 /*for menu transition*/
 .sidebar{
@@ -101,37 +108,205 @@ body{
     right: 0;
     top: 7vh;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.274);
+    background-color: var(--sideBg);
     height: 93vh;
-    width: 100vw;
+    width: 100%;
 }
 .controlSidebar{
-    transform: translateX(100%);
+    transform: translateX(100vw);
 }
 .sidebar div{
     height: 7vh;
     width: 100%;
-    background-color: ;
     display: flex;
     justify-content: center;
-    border-top:1px solid rgba(255, 255, 255, 0.484) ;
+    border-top:1px solid var(--sideBorder) ;
     align-items: center;
 }
 .sidebar div a{
     background-color: transparent;
-    color: white;
+    color: var(--color);
     font-size: 30px;
     text-decoration: none;
 }
 .sidebar .lastA{
-    border-bottom: 1px solid rgba(255, 255, 255, 0.434);
+    border-bottom: 1px solid var(--sideBorder);
 }
 .sidebarOpen{
+    display: flex;
     animation: movein 0.8s ease forwards;
 }
 .sidebarClose{
+    display: flex;
     animation: moveout 0.5s ease forwards;
 }
+
+
+
+
+
+
+/*for Hero Section*/
+.hero{
+    height: 90vh;
+    width: 100%;
+    margin-top: 3vh;
+    padding: 0 1vw 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.infoPhoto{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.info{
+    width: 48%;
+    height: 90%;
+}
+.mainInfo{
+    height: 100%;
+    background-color: var(--bgBlurColor);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 25px;
+}
+.mainInfo .topbutton{
+    height: 40px;
+    width: 45%;
+    background-color: var(--buttonBg);
+    border: 1px solid var(--logoBlue);
+    color: var(--color);
+    border-radius: 25px;
+    text-align: center;
+    padding-top: 10px;
+}
+.mainInfo .heading .firstHeading{
+    margin-top: 5vh;
+    font-size: 60px;
+    color: var(--color);
+}
+.mainInfo .heading .secondHeading{
+    color: var(--logoBlue);
+    font-size: 60px;
+    margin-bottom: 2.5vh;
+}
+.mainInfo .bottomSpan{
+    display: inline-block;
+    height: 10px;
+    width: 5vw;
+    background: linear-gradient(to right, var(--logoBlue), var(--logoGreen));
+    margin-bottom: 2.5vh;
+    border-radius: 25px;
+}
+.mainInfo .description{
+    color: var(--color);
+}
+.mainInfo .description span{
+    color: var(--logoBlue);
+
+}
+.mainInfo .description .textStack{
+    color: var(--logoGreen);
+}
+.infoPhoto img{
+    height: 90%;
+    width: 45%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px var(--logoBlue) solid;
+    box-shadow: 0 0 10px var(--logoGreen);
+}
+/*for cv Buttons*/
+.info .cvButtons{
+    margin-top: 2vh;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.info .cvButtons .cv{
+    height: 45px;
+    width: 300px;
+    background-color: var(--buttonBg);
+    border: 1px solid var(--logoBlue);
+    border-radius: 25px;
+    color: var(--color);
+    font-size: 18px;
+}
+.cvButtons> i{
+    font-size: 25px;
+    color: var(--color);
+}
+
+/*for hero cards*/
+.hero .cards{
+    height: 12vh;
+    width: 100%;
+    margin-bottom:;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+.hero .cards div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bgBlurColor);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    color: var(--color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1300px) {
+    .navbar{
+        padding: 0 3vw;
+    }
+    .infoPhoto{
+        justify-content: space-around;
+    }
+    .cards{
+        padding: 0 2vw;
+    }
+}
+@media (max-width: 1075px) {
+    
+    .menu{
+        display: none;
+    }
+    .menuIcon{
+        display: flex;
+    }
+    .navbar{
+        gap: ;
+        justify-content: space-between;
+    }
+}
+
+
 @keyframes movein {
     0%{
         transform: translateX(100%);
@@ -153,66 +328,4 @@ body{
         transform: translateX(100%);
         opacity: 0;
     }
-}
-
-
-
-
-
-/*for Hero Section*/
-.hero{
-    height: 90vh;
-    width: 100%;
-    background-color: beige;
-    margin-top: 3vh;
-}
-.infoPhoto{
-    height: 80%;
-    width: 100%;
-    background-color:;
-    display: flex;
-    justify-content: space-between;
-    
-}
-.info{
-    width: 48%;
-    height: 90%;
-}
-.mainInfo{
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.688);
-    backdrop-filter: blur(10px);
-    border: 1px solid white;
-    padding: 25px;
-}
-.mainInfo .topbutton{
-    height: 40px;
-    width: 37%;
-    background-color: rgb(24, 33, 74);
-    border-radius: 25px;
-    text-align: center;
-    padding-top: 10px;
-}
-.mainInfo .heading .firstHeading{
-    margin-top: 5vh;
-    font-size: 60px;
-}
-.mainInfo .heading .secondHeading{
-    color: rgb(255, 0, 162);
-    font-size: 60px;
-    margin-bottom: 2.5vh;
-}
-.mainInfo .bottomSpan{
-    display: inline-block;
-    height: 10px;
-    width: 5vw;
-    background: linear-gradient(to right, black, rgb(255, 0, 162));
-    margin-bottom: 2.5vh;
-    border-radius: 25px;
-}
-.infoPhoto img{
-    height: 90%;
-    width: 48%;
-    object-fit: cover;
-    border-radius: 50%;
 }
