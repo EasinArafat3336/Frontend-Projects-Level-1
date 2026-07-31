@@ -270,6 +270,140 @@ body{
 
 
 
+/*For Education Section**************************/
+.mainContent .education{
+    height: 150vh;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10vh;
+    padding: 10vh 0 0 0;
+}
+.eduHeading{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10vh;
+}
+.eduHeading h1{
+    font-size: 100px;
+    font-weight: 900;
+    color: var(--color);
+}
+.mainContent .timeline{
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+.education .timeline::before{
+    content: " ";
+    height: 95%;
+    width: 10px;
+    position: absolute;
+    left: 50%;
+    top: 2.5%;
+    transform: translateX(-50%);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.124), rgb(255, 255, 255));
+    border-radius: 5px;
+}
+.educard{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+
+}
+.college{
+    justify-content: flex-end;
+}
+.college .collrapper::after{
+    content: " ";
+    height: 40px;
+    width: 40px;
+    background-color: rgb(0, 255, 234);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -29%;
+    border-radius: 25px;
+}
+.rapper{
+    height: 35vh;
+    width: 40%;
+    background: linear-gradient(to top right, #05f8a76c , #02bdfb83 );
+    border: 1px solid var(--color);
+    border-radius: 20px;
+    padding: 0 10px;
+    color: var(--color);
+    position: relative;
+}
+.rapper::after{
+    content: " ";
+    height: 40px;
+    width: 40px;
+    background-color: rgb(0, 255, 234);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -29%;
+    border-radius: 25px;
+}
+.rapper .logoDate{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.rapper .logoDate .logo{
+    height: 70px;
+    width: 70px;
+    background: linear-gradient(to top right, rgba(0, 149, 255, 0.058), rgb(0, 174, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.rapper .logoDate .logo i{
+    font-size: 35px;
+    color: var(--color);
+}
+.rapper .logoDate .date{
+    display: flex;
+    gap: 5px;
+    height: 40px;
+    width: 200px;
+    background-color: var(--buttonBg);
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: 1px solid var(--color);
+}
+.rapper .logoDate .date i{
+    font-size: 25px;
+}
+.rapper .logoDate .date p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.rapper > p{
+    font-size: 18px;
+    margin-top: 10px;
+}
+.rapper > h1{
+    margin: 15px 0;
+    line-height: 1;
+}
+.rapper > h2{
+    font-size: 20px;
+    font-weight: ;
+}
+.rapper .location{
+    display: flex;
+    margin-top: 10px;
+}
 
 
 
