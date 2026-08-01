@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 :root{
-    --mainbgColor:rgb(65, 65, 128); 
+    --mainbgColor:rgb(255, 255, 255); 
     --logoBlue: rgb(40, 212, 255);
     --logoGreen: rgb(3, 255, 205);
-    --color: #fff;
+    --color: black;
     --buttonBg: rgba(36, 174, 229, 0.245);
-    --border: #ffffff8f;
+    --border: #020000;
     --bgBlurColor: #ffffff23;
     --sideBg: rgba(0, 0, 0, 0.274);
     --sideBorder: rgba(255, 255, 255, 0.484);
+    --heading-size: 100px;
+    --heading-width: 900;
 }
 .dark{
     --mainbgColor: black; 
@@ -43,6 +45,10 @@ body{
     width: 1300px;
     position: relative;
 }
+
+
+
+
 /*for navigation bar*/
 .navbar{
     height: 7vh;
@@ -56,10 +62,11 @@ body{
 .logo{
     font-size: 35px;
     flex-shrink: 0;
-    color: var(--logoBlue);
+    font-weight: 800;
+    color: var(--color);
 }
 .logo span{
-    color: var(--logoGreen);
+    color: var(--color);
 }
 .menu{
     display: flex;
@@ -303,7 +310,7 @@ body{
     left: 50%;
     top: 2.5%;
     transform: translateX(-50%);
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.124), rgb(255, 255, 255));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.329), rgb(0, 0, 0));
     border-radius: 5px;
 }
 .educard{
@@ -321,32 +328,32 @@ body{
     content: " ";
     height: 40px;
     width: 40px;
-    background-color: rgb(0, 255, 234);
+    background-color: linear-gradient(to top right, rgba(0, 149, 255, 0.058), rgb(0, 174, 255));
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: -29%;
+    left: -27%;
     border-radius: 25px;
 }
 .rapper{
     height: 35vh;
     width: 40%;
-    background: linear-gradient(to top right, #05f8a76c , #02bdfb83 );
-    border: 1px solid var(--color);
+    box-shadow: 5px 5px 5px black, inset -5px -5px 10px;
     border-radius: 20px;
     padding: 0 10px;
     color: var(--color);
     position: relative;
+    margin: 0 10px;
 }
 .rapper::after{
     content: " ";
     height: 40px;
     width: 40px;
-    background-color: rgb(0, 255, 234);
+    background-color:  rgb(0, 174, 255);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: -29%;
+    right: -27%;
     border-radius: 25px;
 }
 .rapper .logoDate{
@@ -405,6 +412,65 @@ body{
     margin-top: 10px;
 }
 
+
+
+
+
+/****** for Skill Section********************/
+.skill{
+    height: 80vh;
+    width: 100%;
+    margin: 20vh 0 10vh;
+}
+.skill .heading{    
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh 0 0 0;
+}
+.skill .heading h1{  
+    color: var(--color);  
+    font-size: var(--heading-size);
+    font-weight: var(--heading-width);
+}
+.skill .icon{    
+    height: 40vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+.skill .icon div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.skill .icon div div{
+    height: 200px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--bgBlurColor);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px black , -5px -5px 10px inset black;
+    overflow: hidden;
+}  
+.skill .icon div div i{
+    font-size: 100px;
+    color: var(--color);
+}
+.skill .icon div div p{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color);
+}
 
 
 
