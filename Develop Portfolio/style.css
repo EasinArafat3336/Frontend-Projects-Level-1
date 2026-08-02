@@ -2,16 +2,18 @@
 
 :root{
     --mainbgColor:rgb(255, 255, 255); 
-    --logoBlue: rgb(40, 212, 255);
-    --logoGreen: rgb(3, 255, 205);
+    --logo: #C9A227;
     --color: black;
-    --buttonBg: rgba(36, 174, 229, 0.245);
-    --border: #020000;
+    --bgColor-white: white;
+    --buttonBg: #c9a3274f;
+    --border: rgba(116, 102, 8, 0.325);
     --bgBlurColor: #ffffff23;
     --sideBg: rgba(0, 0, 0, 0.274);
     --sideBorder: rgba(255, 255, 255, 0.484);
     --heading-size: 100px;
     --heading-width: 900;
+    --shadow-color: rgba(0, 0, 0, 0.515);
+    --shadow-color-inset: rgba(0, 0, 0, 0.195);
 }
 .dark{
     --mainbgColor: black; 
@@ -56,14 +58,18 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: sticky;
+    top: 0;
     padding: 0 1vw;
+    z-index: 2;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--buttonBg);
 }
 .logo{
     font-size: 35px;
     flex-shrink: 0;
     font-weight: 800;
-    color: var(--color);
+    color: var(--logo);
 }
 .logo span{
     color: var(--color);
@@ -88,7 +94,7 @@ body{
     display: inline-block;
     font-size: 30px;
     cursor: pointer;
-    color: var(--logoBlue);
+    color: var(--logo);
 }
 .menuIcon{
     display: none;
@@ -198,7 +204,7 @@ body{
     color: var(--color);
 }
 .mainInfo .heading .secondHeading{
-    color: var(--logoBlue);
+    color: var(--logo);
     font-size: 60px;
     margin-bottom: 2.5vh;
 }
@@ -225,8 +231,8 @@ body{
     width: 45%;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px var(--logoBlue) solid;
-    box-shadow: 0 0 10px var(--logoGreen);
+    border: 5px var(--buttonBg) solid;
+    box-shadow: 0 0 10px var(--border);
 }
 /*for cv Buttons*/
 .info .cvButtons{
@@ -296,6 +302,7 @@ body{
     font-size: 100px;
     font-weight: 900;
     color: var(--color);
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.419);
 }
 .mainContent .timeline{
     height: auto;
@@ -312,6 +319,8 @@ body{
     transform: translateX(-50%);
     background: linear-gradient(to top, rgba(0, 0, 0, 0.329), rgb(0, 0, 0));
     border-radius: 5px;
+    box-shadow: 3px 3px 5px var(--color), inset -3px -3px 5px var(--color);
+
 }
 .educard{
     height: 40vh;
@@ -328,33 +337,36 @@ body{
     content: " ";
     height: 40px;
     width: 40px;
-    background-color: linear-gradient(to top right, rgba(0, 149, 255, 0.058), rgb(0, 174, 255));
+    background: var();
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: -27%;
+    left: -25%;
     border-radius: 25px;
+    box-shadow: 3px 3px 5px var(--color), inset -3px -3px 5px var(--color);
 }
 .rapper{
     height: 35vh;
     width: 40%;
-    box-shadow: 5px 5px 5px black, inset -5px -5px 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.515), inset -5px -5px 10px rgba(0, 0, 0, 0.195) ;
     border-radius: 20px;
-    padding: 0 10px;
+    padding: 0 20px;
     color: var(--color);
     position: relative;
-    margin: 0 10px;
+    margin: 0 20px;
 }
 .rapper::after{
     content: " ";
     height: 40px;
     width: 40px;
-    background-color:  rgb(0, 174, 255);
+    background-color:  rgb(88, 87, 87);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: -27%;
+    right: -25%;
     border-radius: 25px;
+    box-shadow: 3px 3px 5px var(--color), inset -3px -3px 5px var(--color);
+
 }
 .rapper .logoDate{
     height: 30%;
@@ -367,7 +379,7 @@ body{
 .rapper .logoDate .logo{
     height: 70px;
     width: 70px;
-    background: linear-gradient(to top right, rgba(0, 149, 255, 0.058), rgb(0, 174, 255));
+    background: linear-gradient(to top right, rgba(0, 149, 255, 0.058), var(--logo));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -400,7 +412,7 @@ body{
     margin-top: 10px;
 }
 .rapper > h1{
-    margin: 15px 0;
+    margin: 10px 0;
     line-height: 1;
 }
 .rapper > h2{
@@ -434,6 +446,7 @@ body{
     color: var(--color);  
     font-size: var(--heading-size);
     font-weight: var(--heading-width);
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.41);
 }
 .skill .icon{    
     height: 40vh;
@@ -459,12 +472,13 @@ body{
     background-color: var(--bgBlurColor);
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    box-shadow: 5px 5px 5px black , -5px -5px 10px inset black;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.515) , -5px -5px 10px inset rgba(0, 0, 0, 0.195);
     overflow: hidden;
 }  
 .skill .icon div div i{
     font-size: 100px;
-    color: var(--color);
+    color: var(--logo);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.459);
 }
 .skill .icon div div p{
     font-size: 20px;
@@ -474,6 +488,99 @@ body{
 
 
 
+
+/*for Project Section**************/
+.project{
+    height: 110vh;
+    width: 100%;
+    margin-bottom: 10vh;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center; 
+}
+.project .heading{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project .heading h1{
+    font-size: var(--heading-size);
+    font-weight: var(--heading-width);
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.41);
+
+}
+
+.project .projectCards{
+    height: 80vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.project .projectCards > div{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0 40px ;
+    box-shadow: 3px 3px 10px var(--shadow-color), inset -5px -5px 10px var(--shadow-color-inset);
+}
+.project .projectCards div .photoSection{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--buttonBg);
+}
+.project .projectCards div .photoSection img{
+    height: 90%;
+    width:  90%;
+    object-fit: cover;
+}
+.projectCards .description{
+    height: 40%;
+    width: 100%;
+    padding: 5px 20px;
+    
+}
+.projectCards .description h2{
+   color: var(--color);
+   margin-bottom: 5px;
+
+}
+.projectCards .description > p{
+    color: var(--color);
+    font-size: 16px;
+
+}
+.projectCards .description .technology{
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.projectCards .description .technology div{
+    height: 30px;
+    width: 65px;
+    background-color: var(--buttonBg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+.projectCards .description .technology .jsDiv{
+    height: 30px;
+    width: 140px;
+}
+.projectCards .description .technology div p{
+   font-size: 18px;
+}
 
 
 
