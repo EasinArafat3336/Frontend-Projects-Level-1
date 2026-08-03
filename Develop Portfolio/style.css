@@ -28,6 +28,7 @@
 }
 
 
+
 *{
     margin: 0;
     padding: 0;
@@ -176,7 +177,7 @@ body{
     justify-content: space-between;
     
 }
-.info{
+.infoPhoto .info{
     width: 48%;
     height: 90%;
 }
@@ -261,7 +262,6 @@ body{
 .hero .cards{
     height: 12vh;
     width: 100%;
-    margin-bottom:;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
@@ -417,7 +417,7 @@ body{
 }
 .rapper > h2{
     font-size: 20px;
-    font-weight: ;
+
 }
 .rapper .location{
     display: flex;
@@ -584,7 +584,115 @@ body{
 
 
 
+/********for Contact Me section****************/
+.contact{
+    height: 100vh;
+    width: 100%;
+    margin: 15vh 0 5vh 0;
+    padding-top: 10vh;
+}
+.contact .heading{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+.contact .heading h1{
+    font-size: var(--heading-size);
+    font-weight: var(--heading-width);
+        text-shadow: 5px 5px 10px var(--shadow-color);
 
+  
+}
+.contact .mainContent{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainContent .form{
+    height: 100%;
+    width: 58%;
+    margin-right: 2%;
+}
+.form .formHeading{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+.form .formHeading > h3{
+    font-size: 40px;
+}
+.form .mainform{
+    height: 80%;
+    width: 100%;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 4fr;
+    gap: 20px 30px;
+    justify-items: center;
+    align-items: center;
+}
+.form .mainform > input{
+    height: 100%;
+    width: 100%;
+    padding-left: 20px;
+    border: 2px solid var(--color);
+    border-radius: 15px;
+    transition: box-shadow 0.2s ease;
+}
+.form .mainform > input:focus{
+    box-shadow: 8px 8px var(--color);
+    outline: none;
+
+}
+.form .mainform > input::placeholder{
+    color: black;
+}
+.form .mainform .subject{
+    grid-column: 1/3;
+}
+.form .mainform .message{
+    grid-column: 1/3;
+    position: relative;
+}
+.form .mainform .message::placeholder{
+    position: absolute;
+    top: 20px;
+}
+.form .button{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.form .button button{
+    height: 50px;
+    width: 250px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid var(--color);
+}
+.mainContent .address{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid var(--color);
+
+}
 
 
 
@@ -608,7 +716,6 @@ body{
         display: flex;
     }
     .navbar{
-        gap: ;
         justify-content: space-between;
     }
 }
