@@ -47,6 +47,8 @@ body{
     height: 100%;
     width: 1300px;
     position: relative;
+    overflow-x: hidden;
+
 }
 
 
@@ -107,7 +109,7 @@ body{
     display: inline-block;
     height: 5px;
     width: 25px;
-    background-color: var(--logoGreen);
+    background-color: var(--color);
 }
 
 
@@ -127,7 +129,7 @@ body{
     width: 100%;
 }
 .controlSidebar{
-    transform: translateX(100vw);
+    transform: translateX(100%);
 }
 .sidebar div{
     height: 7vh;
@@ -455,7 +457,7 @@ body{
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
 }
-.skill .icon div{
+.skill .icon .iconrapper{
     height: 100%;
     width: 100%;
     display: flex;
@@ -709,7 +711,6 @@ body{
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
-    background-color: ;
     box-shadow: 10px 10px var(--color);
     border: 2px solid var(--color);
 }
@@ -739,7 +740,28 @@ body{
 }
 
 
-
+@keyframes movein {
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+        border-top-left-radius: 25%;
+        border-bottom-left-radius: 50%;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes moveout {
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
 
 
 @media (max-width: 1300px) {
@@ -763,29 +785,5 @@ body{
     }
     .navbar{
         justify-content: space-between;
-    }
-}
-
-
-@keyframes movein {
-    0%{
-        transform: translateX(100%);
-        opacity: 0;
-        border-top-left-radius: 25%;
-        border-bottom-left-radius: 50%;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-@keyframes moveout {
-    0%{
-        transform: translateX(0);
-        opacity: 1;
-    }
-    100%{
-        transform: translateX(100%);
-        opacity: 0;
     }
 }
