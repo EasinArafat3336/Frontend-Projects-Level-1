@@ -47,7 +47,6 @@ body{
     height: 100%;
     width: 1300px;
     position: relative;
-    overflow-x: hidden;
 
 }
 
@@ -115,7 +114,7 @@ body{
 
 /*for menu transition*/
 .sidebar{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -164,109 +163,139 @@ body{
 
 /*for Hero Section*/
 .hero{
-    height: 90vh;
+    min-height: 90vh;
+    height: auto;
     width: 100%;
     margin-top: 3vh;
-    padding: 0 1vw 1vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding-bottom: 1vh;
+    position: relative;
 }
+
 .infoPhoto{
-    height: 75%;
+    min-height: 65vh;
+    background-color: ;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
+    flex-wrap: wrap;
 }
-.infoPhoto .info{
+.infoPhoto img{
+    display: block;
+    width: 45%;
+    min-width: 400px;
+    object-fit: cover;
+    max-height: 90%;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    border: 5px var(--buttonBg) solid;
+    box-shadow: 0 0 10px var(--border);
+}
+.infoRapper{
     width: 48%;
-    height: 90%;
 }
-.mainInfo{
+.info{
     height: 100%;
+    width: 100%;
     background-color: var(--bgBlurColor);
     backdrop-filter: blur(5px);
     border: 1px solid var(--border);
     padding: 25px;
+    display: flex;
+    flex-direction: column;
     border-radius: 25px;
+    position: relative;
+    margin-bottom: 10px;
 }
-.mainInfo .topbutton{
+
+
+.info .topbutton{
     height: 40px;
-    width: 45%;
+    width: 250px;
     background-color: var(--buttonBg);
     border: 1px solid var(--logoBlue);
     color: var(--color);
     border-radius: 25px;
     text-align: center;
     padding-top: 10px;
+    margin-bottom: 10px;
 }
-.mainInfo .heading .firstHeading{
-    margin-top: 5vh;
+.heading .firstHeading{
     font-size: 60px;
     color: var(--color);
+
 }
-.mainInfo .heading .secondHeading{
+.heading .secondHeading{
     color: var(--logo);
     font-size: 60px;
-    margin-bottom: 2.5vh;
 }
-.mainInfo .bottomSpan{
+.info .bottomSpan{
     display: inline-block;
     height: 10px;
     width: 5vw;
-    background: linear-gradient(to right, var(--logoBlue), var(--logoGreen));
-    margin-bottom: 2.5vh;
+    background: linear-gradient(to right, var(--color), var(--bgBlurColor));
     border-radius: 25px;
+    margin-bottom: 1vw;
 }
-.mainInfo .description{
+ .description{
     color: var(--color);
+    margin-bottom: 10px;
 }
-.mainInfo .description span{
+ .description span{
     color: var(--logoBlue);
 
 }
-.mainInfo .description .textStack{
+ .description .textStack{
     color: var(--logoGreen);
 }
-.infoPhoto img{
-    height: 90%;
-    width: 45%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px var(--buttonBg) solid;
-    box-shadow: 0 0 10px var(--border);
-}
-/*for cv Buttons*/
-.info .cvButtons{
-    margin-top: 2vh;
-    height: 5vh;
+
+
+.Buttons{
+    min-height: 5vh;
+    height: auto;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-content: center;
 }
-.info .cvButtons .cv{
+
+.cv{
     height: 45px;
-    width: 300px;
+    min-width: 250px;
+    width: 45%;
     background-color: var(--buttonBg);
     border: 1px solid var(--logoBlue);
     border-radius: 25px;
     color: var(--color);
     font-size: 18px;
 }
-.cvButtons> i{
+.iconRapper{
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+
+}
+.buttonsRapper i{
     font-size: 25px;
     color: var(--color);
 }
 
 /*for hero cards*/
-.hero .cards{
+ .cards{
     height: 12vh;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
+    margin-top: 3vh;
+
 }
 .hero .cards div{
     display: flex;
@@ -614,11 +643,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
 }
 .mainContent .form{
     height: 100%;
     width: 58%;
-    margin-right: 2%;
 }
 .form .formHeading{
     height: 10%;
@@ -700,11 +729,12 @@ body{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 20px;
+    padding-left: 1vw;
     border-radius: 15px;
     gap: 10px;
     border: 1px solid var(--color);
     color: var(--color);
+    word-break: break-all;
 }
 .address .info{
     display: flex;
@@ -722,7 +752,7 @@ body{
 }
 .address >div .icon{
     height: 60px;
-    width: 60px;
+    min-width: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -774,6 +804,11 @@ body{
     .cards{
         padding: 0 2vw;
     }
+
+    .contact{
+        padding: 0 2vw;
+    }
+    
 }
 @media (max-width: 1075px) {
     
@@ -785,5 +820,48 @@ body{
     }
     .navbar{
         justify-content: space-between;
+    }
+}
+
+@media (max-width: 800px){
+    /*for Hero Section*/
+    .infoPhoto{
+        flex-direction: column;
+    }
+    .infoPhoto img{
+        order: 1;
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    .infoPhoto .infoRapper{
+        order: 2;
+        width: 96%;
+    }
+    .secondHeading ,.firstHeading{
+        font-size: 40px;
+    }
+
+    .cards{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 24vh;
+    }
+    
+
+
+    .contact .mainContent{
+        flex-direction: column;
+        height: auto;
+    }
+    .contact .mainContent .form{
+        order: 2;
+        height: 50vh;
+        width: 90%;
+    }
+    .contact .mainContent .address{
+        order: 1;
+        width: 90%;
+        height: 40vh;
+        margin-bottom: 20px;
     }
 }
