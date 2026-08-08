@@ -315,8 +315,8 @@ body{
 
 
 /*For Education Section**************************/
-.mainContent .education{
-    height: 150vh;
+.education{
+    height: auto;
     width: 100%;
     overflow: hidden;
     margin-top: 10vh;
@@ -335,12 +335,12 @@ body{
     color: var(--color);
     text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.419);
 }
-.mainContent .timeline{
+.timeline{
     height: auto;
     width: 100%;
     position: relative;
 }
-.education .timeline::before{
+.timeline::before{
     content: " ";
     height: 95%;
     width: 10px;
@@ -354,17 +354,17 @@ body{
 
 }
 .educard{
-    height: 40vh;
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
-
+    min-height: 350px;
 
 }
 .college{
     justify-content: flex-end;
 }
-.college .collrapper::after{
+.collrapper::after{
     content: " ";
     height: 40px;
     width: 40px;
@@ -377,14 +377,17 @@ body{
     box-shadow: 3px 3px 5px var(--color), inset -3px -3px 5px var(--color);
 }
 .rapper{
-    height: 35vh;
+    height: auto;
     width: 40%;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.515), inset -5px -5px 10px rgba(0, 0, 0, 0.195) ;
     border-radius: 20px;
-    padding: 0 20px;
+    padding: 20px;
     color: var(--color);
     position: relative;
     margin: 0 20px;
+}
+.unirapper{
+    height: ;
 }
 .rapper::after{
     content: " ";
@@ -461,17 +464,20 @@ body{
 
 /****** for Skill Section********************/
 .skill{
-    height: 80vh;
+    padding-top: 10vh;
+    min-height: 70vh;
+    height: auto;
     width: 100%;
     margin: 20vh 0 10vh;
+    background-color: rgb(51, 71, 71);
 }
 .skill .heading{    
     width: 100%;
-    height: 25vh;
+    height: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10vh 0 0 0;
+    margin-bottom: 10vh;
 }
 .skill .heading h1{  
     color: var(--color);  
@@ -480,13 +486,14 @@ body{
     text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.41);
 }
 .skill .icon{    
-    height: 40vh;
+    height: 40%;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
+    padding: 0 20px;
 }
-.skill .icon .iconrapper{
+.skill .icon > div{
     height: 100%;
     width: 100%;
     display: flex;
@@ -494,17 +501,18 @@ body{
     align-items: center;
 
 }
-.skill .icon div div{
+.iconrapper{
     height: 200px;
     width: 180px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     background-color: var(--bgBlurColor);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.515) , -5px -5px 10px inset rgba(0, 0, 0, 0.195);
-    overflow: hidden;
 }  
 .skill .icon div div i{
     font-size: 100px;
@@ -522,13 +530,13 @@ body{
 
 /*for Project Section**************/
 .project{
-    height: 110vh;
+    min-height: 110vh;
+    height: auto;
     width: 100%;
-    margin-bottom: 10vh;  
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center; 
+    margin: 20vh 0 5vh 0;  
+    background-color: rgb(20, 153, 248);
+   
+    
 }
 .project .heading{
     height: 20vh;
@@ -536,6 +544,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5vh;
 }
 .project .heading h1{
     font-size: var(--heading-size);
@@ -544,22 +553,24 @@ body{
 
 }
 
-.project .projectCards{
-    height: 80vh;
+.projectCards{
+    height: 80%;
     width: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
-.project .projectCards > div{
-    height: 100%;
+.projectCards > div{
+    min-height: 370px;
+    height: 90%;
+    max-height: auto;
     width: 100%;
     overflow: hidden;
     border-radius: 0 40px ;
     box-shadow: 3px 3px 10px var(--shadow-color), inset -5px -5px 10px var(--shadow-color-inset);
 }
-.project .projectCards div .photoSection{
+.projectCards div .photoSection{
     height: 60%;
     width: 100%;
     display: flex;
@@ -567,7 +578,7 @@ body{
     align-items: center;
     background-color: var(--buttonBg);
 }
-.project .projectCards div .photoSection img{
+.projectCards div .photoSection img{
     height: 90%;
     width:  90%;
     object-fit: cover;
@@ -619,8 +630,9 @@ body{
 .contact{
     height: 100vh;
     width: 100%;
-    margin: 15vh 0 5vh 0;
+    margin: 5vh 0;
     padding-top: 10vh;
+    background-color: #C9A227;
 }
 .contact .heading{
     height: 20vh;
@@ -808,6 +820,9 @@ body{
     .contact{
         padding: 0 2vw;
     }
+    .projectCards{
+        padding: 0 20px;
+    }
     
 }
 @media (max-width: 1075px) {
@@ -822,25 +837,46 @@ body{
         justify-content: space-between;
     }
 }
+@media (max-width: 1111px) {
+    .projectCards{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+@media (max-width: 980px) {
+    .skill .icon{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 @media (max-width: 800px){
     /*for Hero Section*/
     .infoPhoto{
         flex-direction: column;
+        margin-bottom: 2vh;
     }
     .infoPhoto img{
         order: 1;
         width: 50%;
         margin-bottom: 10px;
     }
+    .info{
+        margin-bottom: 2vh;
+    }
     .infoPhoto .infoRapper{
         order: 2;
         width: 96%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin
     }
     .secondHeading ,.firstHeading{
         font-size: 40px;
     }
-
+    .Buttons{
+        width: 70%;
+    }
     .cards{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -849,6 +885,54 @@ body{
     
 
 
+
+
+
+
+    /*for Education*/
+    .timeline::before{
+        left: 10%;
+        top: 1.5%;
+    }
+    .timeline{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .educard{
+        height: auto;
+        min-height: auto;
+        justify-content: center;
+        padding-left: 5vw;
+        margin-bottom: 30px;
+    }
+    .rapper{
+        width: 70%;
+    }
+    .rapper::after{
+        left: -18%;
+    }
+    .college::after{
+        left: -11%;
+    }
+
+
+
+    /*for Project*/
+    .project{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .projectCards{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        width: 80%;
+    }
+
+
+
+    /*for Contact*/
     .contact .mainContent{
         flex-direction: column;
         height: auto;
@@ -863,5 +947,20 @@ body{
         width: 90%;
         height: 40vh;
         margin-bottom: 20px;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .skill{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill .icon{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        width: 80%;
     }
 }
